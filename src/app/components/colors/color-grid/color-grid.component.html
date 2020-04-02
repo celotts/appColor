@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="column" *ngFor="let itemCard of dataColor">
+    <div class="card">
+      <div>{{ itemCard.year }}</div>
+      <article class="text-center">
+        <h4>{{ itemCard.name }}</h4>
+        <h3>{{ itemCard.color }}</h3>
+        <div class="bottom text-right">{{ itemCard.pantone_value }}</div>
+      </article>
+    </div>
+  </div>
+</div>
