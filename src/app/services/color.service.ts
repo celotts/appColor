@@ -15,7 +15,6 @@ export class ColorService {
   }
 
   getColor(nPage: number = 1) {
-    console.log('lñkñkñkñkñkñkñ', nPage);
     return this.http.get(`${environment.apiUrl}${environment.service.colors.endpoint}?page=${nPage}`, this.headers);
   }
 }

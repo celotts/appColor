@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Color } from 'src/app/models/color';
 import { ColorService } from 'src/app/services/color.service';
 
@@ -9,23 +9,32 @@ import { ColorService } from 'src/app/services/color.service';
   styleUrls: ['./color-grid.component.css']
 })
 export class ColorGridComponent implements OnInit {
-  dataColor: Color;
 
-  constructor(private colorService: ColorService) { }
+  @Input() dataColors;
+  @Input() colorCopiado: any = false;
+
+  // tslint:disable-next-line: no-output-rename
+  @Output('copiar')
+  copiado: EventEmitter<boolean> = new EventEmitter<boolean>();
+  constructor() { }
 
   ngOnInit() {
-    this.getColor();
   }
 
-  getColor(nPage: number = 2) {
-    this.colorService.getColor(nPage).subscribe(respServiceColor => {
+  copiar(i) {
 
-      const dataColors = new Color(JSON.parse(JSON.stringify(respServiceColor)));
+    const COLOR_A_COPIAR = document.getElementById('colorCopy-' + i);
+    const SELECCION = document.createRange();
+    SELECCION.selectNodeContents(COLOR_A_COPIAR);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(SELECCION);
+    const RES = document.execCommand('copy');
+    window.getSelection().removeRange(SELECCION);
 
-      // tslint:disable-next-line: no-string-literal
-      this.dataColor = dataColors['data'];
-      console.log('hjhjhjhjjh', this.dataColor);
-    });
+    console.log('Se ha copiado el color:' + SELECCION);
+
+    this.copiado.emit(true);
   }
+
 
 }

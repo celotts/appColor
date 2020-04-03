@@ -7,10 +7,11 @@ export class Color extends Empresa {
   data: any = [];
   constructor(objetoColor: IObjetoColor) {
     super(objetoColor['ad']);
+
     this.page = objetoColor && objetoColor['page'] || 0;
     this.perPage = objetoColor && objetoColor['perPage'] || 0;
     this.total = objetoColor && objetoColor['total'] || 0;
-    this.totalPages = objetoColor && objetoColor['totalPages'] || 0;
+    this.totalPages = objetoColor && objetoColor['total_pages'] || 0;
     this.data = objetoColor && objetoColor['data'] || null;
 
   }

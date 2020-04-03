@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { ColorGridComponent } from '../components/colors/color-grid/color-grid.component';
 import { ColorsComponent } from '../components/colors/colors.component';
+import { ColorCopyComponent } from '../components/colors/color-copy/color-copy.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'copiar',
-        component: ColorGridComponent
+        component: ColorCopyComponent
       }
     ]
   }

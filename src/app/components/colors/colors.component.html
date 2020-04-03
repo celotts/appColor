@@ -1,2 +1,17 @@
-<app-color-grid></app-color-grid>
-<app-footer-grid-color></app-footer-grid-color>
+<ng-container *ngIf="colorCopy">
+  <app-color-grid
+    [dataColors]="dataColores"
+    (copiar)="copiado($event)"
+  ></app-color-grid>
+</ng-container>
+
+<app-paginacion-grid-color
+  [dataColors]="navegarPagina"
+  [pagesTotal]="totalPages"
+  (navegacion)="paginacionChange($event)"
+  (copiar)="copiado($event)"
+></app-paginacion-grid-color>
+
+<ng-container *ngIf="!colorCopy">
+  <app-color-copy></app-color-copy>
+</ng-container>
