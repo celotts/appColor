@@ -5,10 +5,11 @@ import { ColorsComponent } from './colors/colors.component';
 import { ColorGridComponent } from './colors/color-grid/color-grid.component';
 import { PaginacionGridColorComponent } from './colors/paginacion-grid-color/paginacion-grid-color.component';
 import { ColorCopyComponent } from './colors/color-copy/color-copy.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
-  declarations: [ColorsComponent, ColorGridComponent, PaginacionGridColorComponent, ColorCopyComponent],
+  declarations: [ColorsComponent, ColorGridComponent, PaginacionGridColorComponent, ColorCopyComponent, NotFoundComponent],
   imports: [
     CommonModule,
     SharedModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Color } from 'src/app/models/color';
 import { ColorService } from 'src/app/services/color.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -16,13 +17,13 @@ export class ColorGridComponent implements OnInit {
   // tslint:disable-next-line: no-output-rename
   @Output('copiar')
   copiado: EventEmitter<boolean> = new EventEmitter<boolean>();
-  constructor() { }
+  constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
   }
 
   copiar(i) {
-
+    this.spinner.show();
     const COLOR_A_COPIAR = document.getElementById('colorCopy-' + i);
     const SELECCION = document.createRange();
     SELECCION.selectNodeContents(COLOR_A_COPIAR);
@@ -34,6 +35,11 @@ export class ColorGridComponent implements OnInit {
     console.log('Se ha copiado el color:' + SELECCION);
 
     this.copiado.emit(true);
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 400);
+
   }
 
 

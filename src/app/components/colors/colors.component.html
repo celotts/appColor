@@ -15,3 +15,13 @@
 <ng-container *ngIf="!colorCopy">
   <app-color-copy></app-color-copy>
 </ng-container>
+
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="default"
+  color="#fff"
+  type="timer"
+  [fullScreen]="true"
+>
+  <p style="color: white;">Loading...</p>
+</ngx-spinner>
