@@ -14,7 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CommonModule,
     SharedModule,
   ],
-  exports: [ColorsComponent, ColorGridComponent, PaginacionGridColorComponent, ColorCopyComponent],
+  exports: [ColorsComponent, ColorGridComponent, PaginacionGridColorComponent, ColorCopyComponent, NotFoundComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class ComponentsModule { }
