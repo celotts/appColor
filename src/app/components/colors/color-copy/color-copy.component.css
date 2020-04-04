@@ -46,7 +46,7 @@ li {
 }
 .click-container:before {
   float: left;
-  padding-top: 41%;
+  padding-top: 39%;
   content: "";
 }
 

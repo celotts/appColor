@@ -1,6 +1,6 @@
 <div class="container">
   <div class="column" *ngFor="let itemCard of dataColors; let i = index">
-    <div (click)="copiar(i)" class="card col-6 round contenido mt-3">
+    <div (click)="copiar(i, itemCard)" class="card col-6 round contenido mt-3">
       <div>{{ itemCard.year }}</div>
       <article class="text-center mt-2">
         <h4>{{ itemCard.name }}</h4>
