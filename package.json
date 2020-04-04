@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "npm run build",
-    "postinstall": "ng build --output-path dist --aot --prod"
+    "postinstall": "ng build --output-path appColor --aot --prod"
   },
   "private": true,
   "dependencies": {
