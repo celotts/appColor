@@ -2,11 +2,13 @@
   "name": "app-color",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve",
+    "ng": "ng",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstal": "ng build --aot --target=production"
   },
   "engines": {
     "node": "10.16.3",
