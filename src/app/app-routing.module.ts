@@ -5,7 +5,7 @@ import { LayoutComponent } from './layout/component/layout/layout.component';
 
 const routes: Routes = [
   { path: '', loadChildren: './layout/layout.module#LayoutModule' },
-  {/*  path: '404', component: NotFoundComponent },
+  /*{  path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' } */
 ];
 @NgModule({
