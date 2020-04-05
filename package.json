@@ -8,13 +8,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run build",
-    "postinstall": "ng build --output-path dist/ --aot --prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
     "@angular/compiler-cli": "^9.1.0",
+    "@angular-devkit/build-angular": "~0.803.3",
+    "@angular/cli": "^9.1.0",
     "@angular/cdk": "^9.2.0",
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
@@ -36,8 +37,6 @@
     "typescript": "~3.8.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.3",
-    "@angular/cli": "^9.1.0",
     "@angular/language-service": "~9.1.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
