@@ -1,3 +1,8 @@
 {
-    "editor.fontSize": 20
+  "editor.fontSize": 16,
+  "editor.accessibilityPageSize": 28,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "200",
+  "debug.console.fontSize": 15,
+  "markdown.preview.fontSize": 15
 }
