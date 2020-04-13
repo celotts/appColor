@@ -14,6 +14,7 @@ export class ColorsComponent implements OnInit {
   navegarPagina: number;
   dataColores: any;
   totalPages = 1;
+  colorCopiado = [];
   constructor(
     private colorService: ColorService,
     private spinner: NgxSpinnerService) { }
@@ -30,8 +31,9 @@ export class ColorsComponent implements OnInit {
   }
 
   copiado(event) {
-
-    this.colorCopy = !event;
+    console.log('sfdgsfdgsfdg', event);
+    this.colorCopy = !event.estadoCopiado;
+    this.colorCopiado = event.itemCopiado;
 
   }
 

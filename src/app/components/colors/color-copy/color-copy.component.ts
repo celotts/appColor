@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-color-copy',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorCopyComponent implements OnInit {
   colorCopy: boolean = true;
+  @Input() itemCopiado;
   constructor() { }
 
   ngOnInit() {
